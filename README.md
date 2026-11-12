@@ -1,6 +1,6 @@
-# Gesture Control Presenter 🎮🖐️
+# Gesture Control 🎮🖐️
 
-Control your Google Slides presentations using hand gestures through your laptop camera using Computer Vision and AI.
+Control your computer with hand gestures – AI-powered touchless interaction using Python and Computer Vision.
 
 This project uses:
 
@@ -8,7 +8,7 @@ This project uses:
 * MediaPipe
 * PyAutoGUI
 
-to detect hand gestures and convert them into presentation controls like:
+to detect hand gestures and convert them into touchless interaction like:
 
 * Next Slide
 * Previous Slide
@@ -27,7 +27,7 @@ to detect hand gestures and convert them into presentation controls like:
 
 ---
 
-# 🧠 Gesture Controls
+# 🧠 Gesture Controls for presentation
 
 | Gesture          | Action          |
 | ---------------- | --------------- |
