@@ -19,10 +19,10 @@ to detect hand gestures and convert them into touchless interaction like:
 
 # 🚀 Features
 
-✅ Control Google Slides using gestures
-✅ Real-time hand tracking using AI
-✅ Works directly from laptop webcam
-✅ No additional hardware required
+✅ Control Google Slides using gestures  
+✅ Real-time hand tracking using AI  
+✅ Works directly from laptop webcam  
+✅ No additional hardware required  
 ✅ Beginner-friendly AI + Computer Vision project
 
 ---
@@ -49,93 +49,144 @@ to detect hand gestures and convert them into touchless interaction like:
 
 # 📦 Installation
 
-## Step 0 - Ensure Python is installed
+## Prerequisites
 
-For Linux and Mac system, please use `python3` instead of `python` in the commands below </br>
+Install **Python 3** and **Git**, then open a terminal (or the VS Code integrated terminal). On Windows, the `py` launcher is used below; on macOS and Linux, use `python3`.
 
-Check if python is installed and available in your system PATH on VSCode Terminal (Terminal → New Terminal):
-```bash
-python -V
+Check that Python is available:
+
+**Windows (PowerShell):**
+
+```powershell
+py --version
 ```
 
----
+**macOS / Linux:**
+
+```bash
+python3 --version
+```
+
 ## Step 1 — Download the code
 
-```bash
-https://github.com/shivam-kotwalia/gesture-control/archive/refs/heads/main.zip
-```
-
----
-
-## Step 2 — Install Dependencies
+Clone this repository and move into its directory:
 
 ```bash
-python -m pip install --break-system-packages -r requirements.txt
+git clone https://github.com/shashankgowda0602/Gesture-Control-.git
+cd Gesture-Control-
 ```
 
-## Step 3 — Download Hand Landmarker Model
+Alternatively, download the ZIP from [the repository page](https://github.com/shashankgowda0602/Gesture-Control-/archive/refs/heads/main.zip), extract it, and open a terminal in the extracted `Gesture-Control-` folder.
+
+## Step 2 — Create and activate a virtual environment
+
+A virtual environment keeps this project's Python packages separate from other applications.
+
+**Windows (PowerShell):**
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+If PowerShell blocks activation, use Command Prompt instead:
+
+```bat
+.venv\Scripts\activate.bat
+```
+
+**macOS / Linux:**
 
 ```bash
-python setup_models.py
+python3 -m venv .venv
+source .venv/bin/activate
 ```
 
----
+## Step 3 — Install dependencies
 
-# ▶️ Run the App
+With the virtual environment activated, run:
+
+**Windows:**
+
+```powershell
+py -m pip install --upgrade pip
+py -m pip install -r requirements.txt
+```
+
+**macOS / Linux:**
 
 ```bash
-python main.py
+python3 -m pip install --upgrade pip
+python3 -m pip install -r requirements.txt
 ```
 
+Do not use `--break-system-packages`; the virtual environment avoids installing packages into your system Python.
+
+## Step 4 — Download the hand-tracking model
+
+Run this from the repository folder while the virtual environment is activated:
+
+**Windows:**
+
+```powershell
+py setup_models.py
+```
+
+**macOS / Linux:**
+
+```bash
+python3 setup_models.py
+```
+
+## Step 5 — Start the app
+
+Keep the virtual environment activated and run:
+
+**Windows:**
+
+```powershell
+py main.py
+```
+
+**macOS / Linux:**
+
+```bash
+python3 main.py
+```
+
+To stop the application, press `Ctrl+C` in the terminal.
+
 ---
-
-# Close the application
-
-Press Ctrl+C in terminal to close the application
-
----
-
 
 # 💻 macOS Permission Setup
 
-For keyboard control to work on macOS:
+For keyboard control to work on macOS, go to:
 
-Go to:
-
-System Settings → Privacy & Security
+**System Settings → Privacy & Security**
 
 Enable permissions for:
 
 * Accessibility
 * Input Monitoring
 
-Allow access for:
-
-* Terminal
-  OR
-* VS Code
-  OR
-* PyCharm
-
-Without these permissions, the app cannot control Google Slides.
+Allow access for the application you use to run the project, such as Terminal, VS Code, or PyCharm. Without these permissions, the app cannot control Google Slides.
 
 ---
 
 # 🎯 How to Use
 
-1. Open Google Slides in Chrome
-2. Start slideshow mode
-3. Run the Python application
-4. Show gestures in front of webcam
-5. Control slides hands-free
+1. Open Google Slides in Chrome.
+2. Start slideshow mode.
+3. Run the Python application.
+4. Show gestures in front of the webcam.
+5. Control slides hands-free.
 
 ---
 
 # 📂 Project Structure
 
-```bash
-gesture-control/
-│
+```text
+Gesture-Control-/
 ├── .gitignore
 ├── main.py
 ├── README.md
@@ -161,11 +212,11 @@ pyautogui>=0.9.54
 
 The application:
 
-1. Captures webcam feed using OpenCV
-2. Detects hand landmarks using MediaPipe
-3. Identifies finger positions
-4. Maps gestures to keyboard shortcuts
-5. Uses PyAutoGUI to control Google Slides
+1. Captures webcam feed using OpenCV.
+2. Detects hand landmarks using MediaPipe.
+3. Identifies finger positions.
+4. Maps gestures to keyboard shortcuts.
+5. Uses PyAutoGUI to control Google Slides.
 
 ---
 
@@ -206,16 +257,17 @@ Use this project during:
 
 # ⚠️ Notes
 
-* Ensure good lighting conditions
-* Keep hand visible to webcam
-* Avoid cluttered backgrounds for better detection
-* Works best at moderate camera distance
+* Ensure good lighting conditions.
+* Keep your hand visible to the webcam.
+* Avoid cluttered backgrounds for better detection.
+* Works best at moderate camera distance.
 
 ---
 
-# Live MediaPipe 
+# Live MediaPipe
+
 ![MediaPipe Hand Tracking Demo](https://google-ai-edge.github.io/mediapipe-samples-web/#/vision/hand_landmarker)
-![Google AI Media Pipe] (https://ai.google.dev/edge/mediapipe/solutions/guide)
+![Google AI Media Pipe](https://ai.google.dev/edge/mediapipe/solutions/guide)
 
 ---
 
