@@ -51,7 +51,7 @@ to detect hand gestures and convert them into touchless interaction like:
 
 ## Prerequisites
 
-Install Python 3 and make sure it is available in your system PATH. Open a terminal in the project folder.
+Make sure you have Python 3 installed on your system.
 
 - On Windows, use `py` in the commands below.
 - On macOS and Linux, use `python3`.
@@ -70,31 +70,26 @@ py --version
 python3 --version
 ```
 
-## Step 1 — Open the project folder
+## Step 1 — Download the code
 
-Go to the local repository folder where this project is stored:
+Clone the repository or download the project ZIP file to your computer.
 
 ```bash
+git clone https://github.com/shashankgowda0602/Gesture-Control-.git
 cd Gesture-Control-
 ```
 
-If your folder name is different, replace `Gesture-Control-` with your actual project folder name.
+If you downloaded the ZIP file instead, extract it and open the project folder.
 
-## Step 2 — Create and activate a virtual environment
+## Step 2 — Install Dependencies
 
-A virtual environment keeps the project dependencies isolated from other Python projects.
+Create and activate a virtual environment (recommended):
 
 **Windows (PowerShell):**
 
 ```powershell
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
-```
-
-If PowerShell blocks activation, use Command Prompt instead:
-
-```bat
-.venv\Scripts\activate.bat
 ```
 
 **macOS / Linux:**
@@ -104,9 +99,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-## Step 3 — Install dependencies
-
-Once the virtual environment is active, install the required packages:
+Install the required Python packages:
 
 **Windows:**
 
@@ -122,9 +115,11 @@ python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
 ```
 
-## Step 4 — Download the hand-tracking model
+## Step 3 — Download Hand Landmarker Model
 
-Run the model setup script from the project folder:
+This project needs the MediaPipe hand model file before running.
+
+Run the setup script from the project folder:
 
 **Windows:**
 
@@ -138,9 +133,11 @@ py setup_models.py
 python3 setup_models.py
 ```
 
-## Step 5 — Start the app
+This downloads the model into the `models/` folder as `hand_landmarker.task`.
 
-With the virtual environment still activated, run the project:
+## ▶️ Run the App
+
+With the virtual environment still activated, start the app:
 
 **Windows:**
 
@@ -153,6 +150,8 @@ py main.py
 ```bash
 python3 main.py
 ```
+
+Open Google Slides and begin your presentation. Then show the gestures in front of your webcam to control the slides.
 
 To stop the app, press `Ctrl+C` in the terminal.
 
