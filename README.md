@@ -51,9 +51,12 @@ to detect hand gestures and convert them into touchless interaction like:
 
 ## Prerequisites
 
-Install **Python 3** and **Git**, then open a terminal (or the VS Code integrated terminal). On Windows, the `py` launcher is used below; on macOS and Linux, use `python3`.
+Install Python 3 and make sure it is available in your system PATH. Open a terminal in the project folder.
 
-Check that Python is available:
+- On Windows, use `py` in the commands below.
+- On macOS and Linux, use `python3`.
+
+Check Python is installed:
 
 **Windows (PowerShell):**
 
@@ -67,20 +70,19 @@ py --version
 python3 --version
 ```
 
-## Step 1 — Download the code
+## Step 1 — Open the project folder
 
-Clone this repository and move into its directory:
+Go to the local repository folder where this project is stored:
 
 ```bash
-git clone https://github.com/shashankgowda0602/Gesture-Control-.git
 cd Gesture-Control-
 ```
 
-Alternatively, download the ZIP from [the repository page](https://github.com/shashankgowda0602/Gesture-Control-/archive/refs/heads/main.zip), extract it, and open a terminal in the extracted `Gesture-Control-` folder.
+If your folder name is different, replace `Gesture-Control-` with your actual project folder name.
 
 ## Step 2 — Create and activate a virtual environment
 
-A virtual environment keeps this project's Python packages separate from other applications.
+A virtual environment keeps the project dependencies isolated from other Python projects.
 
 **Windows (PowerShell):**
 
@@ -104,7 +106,7 @@ source .venv/bin/activate
 
 ## Step 3 — Install dependencies
 
-With the virtual environment activated, run:
+Once the virtual environment is active, install the required packages:
 
 **Windows:**
 
@@ -120,11 +122,9 @@ python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
 ```
 
-Do not use `--break-system-packages`; the virtual environment avoids installing packages into your system Python.
-
 ## Step 4 — Download the hand-tracking model
 
-Run this from the repository folder while the virtual environment is activated:
+Run the model setup script from the project folder:
 
 **Windows:**
 
@@ -140,7 +140,7 @@ python3 setup_models.py
 
 ## Step 5 — Start the app
 
-Keep the virtual environment activated and run:
+With the virtual environment still activated, run the project:
 
 **Windows:**
 
@@ -154,7 +154,7 @@ py main.py
 python3 main.py
 ```
 
-To stop the application, press `Ctrl+C` in the terminal.
+To stop the app, press `Ctrl+C` in the terminal.
 
 ---
 
