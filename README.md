@@ -99,7 +99,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-Install the required Python packages:
+### Install the required Python packages:
 
 **Windows:**
 
